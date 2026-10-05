@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand(time(0));
+    int num = rand() % 900 + 100;
+
+    int d1 = num / 100;
+    int d2 = (num / 10) % 10;
+    int d3 = num % 10;
+
+    printf("N:  %d\n", num);
+
+    if (d1 < d2 && d2 < d3) {
+        printf("Digits in Ascending Order \n");
+    }
+    if (!(d1 < d2 && d2 < d3)) {
+        printf("Not in Ascending Order\n");
+    }
+
+    return 0;
+}
