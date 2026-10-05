@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int val;
+    printf("N:  ");
+    scanf("%d", &val);
+
+    if (val >= 10 && val <= 99 && val % 2 == 0) {
+        printf("Valid Even Two-Digit Number\n");
+    }
+    if (!(val >= 10 && val <= 99 && val % 2 == 0)) {
+        printf("Out of Range or Odd \n");
+    }
+
+    return 0;
+}
