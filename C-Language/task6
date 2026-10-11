@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int amt;
+    printf("Enter amount: ");
+    scanf("%d", &amt);
+
+    if (amt > 0 && amt % 100 == 0) {
+        int n1000 = amt / 1000;
+        int rem1 = amt % 1000;
+        int n500 = rem1 / 500;
+        int rem2 = rem1 % 500;
+        int n100 = rem2 / 100;
+
+        printf("1000 Notes:  %d\n", n1000);
+        printf("500 Notes: %d\n", n500);
+        printf("100 Notes:  %d\n", n100);
+    }
+    if (!(amt > 0 && amt % 100 == 0)) {
+        printf("Invalid Amount: Must be a positive multiple of 100\n");
+    }
+
+    return 0;
+}

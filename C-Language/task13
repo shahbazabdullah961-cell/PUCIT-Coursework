@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand(time(0));
+    int w = rand() % 100;
+    int x = rand() % 100;
+    int y = rand() % 100;
+    int z = rand() % 100;
+
+    printf("Initial: W: %d, X: %d, Y:  %d, Z: %d\n", w, x, y, z);
+
+    int temp;
+    if (w > x) { temp = w; w = x; x = temp; }
+    if (w > y) { temp = w; w = y; y = temp; }
+    if (w > z) { temp = w; w = z; z = temp; }
+    if (x > y) { temp = x; x = y; y = temp; }
+    if (x > z) { temp = x; x = z; z = temp; }
+    if (y > z) { temp = y; y = z; z = temp; }
+
+    printf("Sorted: W:  %d, X: %d, Y: %d, Z: %d \n", w, x, y, z);
+
+    return 0;
+}

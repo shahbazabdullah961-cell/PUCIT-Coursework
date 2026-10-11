@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int m1, m2, m3;
+    printf("Math: ");
+    scanf("%d", &m1);
+    printf("Physics:  ");
+    scanf("%d", &m2);
+    printf("Programming: ");
+    scanf("%d", &m3);
+
+    if (m1 >= 80 && m2 >= 80 && m3 >= 80) {
+        printf("Excellent \n");
+    }
+    if (m1 >= 60 && m2 >= 60 && m3 >= 60 && !(m1 >= 80 && m2 >= 80 && m3 >= 80) && !(m1 < 50 || m2 < 50 || m3 < 50)) {
+        printf("Good\n");
+    }
+    if (m1 < 50 || m2 < 50 || m3 < 50) {
+        printf("Needs Improvement \n");
+    }
+
+    return 0;
+}

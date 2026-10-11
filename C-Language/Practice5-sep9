@@ -1,0 +1,20 @@
+Task1:
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int yr;
+    printf("enter  Year: ");
+    scanf("%d", &yr);
+
+    if ((yr % 400 == 0) || (yr % 4 == 0 && yr % 100 != 0)) {
+        printf(" Leap Year\n");
+    }
+    if (!((yr % 400 == 0) || (yr % 4 == 0 && yr % 100 != 0))) {
+        printf("not a Leap Year \n");
+    }
+
+    return 0;
+}
+

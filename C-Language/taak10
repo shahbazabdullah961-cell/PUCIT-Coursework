@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand(time(0));
+    int x = rand() % 100;
+    int y = rand() % 100;
+    int z = rand() % 100;
+
+    printf("X: %d\n", x);
+    printf("Y:  %d\n", y);
+    printf("Z: %d \n", z);
+
+    if (x < y && x < z) {
+        printf("Unique smallest value: %d\n", x);
+    }
+    if (y < x && y < z) {
+        printf("Unique smallest value:  %d\n", y);
+    }
+    if (z < x && z < y) {
+        printf("Unique smallest value: %d \n", z);
+    }
+    if (!(x < y && x < z) && !(y < x && y < z) && !(z < x && z < y)) {
+        printf("No unique smallest value \n");
+    }
+
+    return 0;
+}
